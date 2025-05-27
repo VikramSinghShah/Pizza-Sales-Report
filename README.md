@@ -1,42 +1,107 @@
-# Pizza-Sales-Report
+**📊 Project Title:**
 
-**📊 Project Overview**
+**End-to-End Sales Analysis Dashboard Using SQL & Power BI & Excel.**
 
-**Objective:** To demonstrate the end-to-end process of a data analytics, from data extraction using SQL to visualization with Power BI, suitable for inclusion in a data.
+An end-to-end business intelligence project analyzing sales and customer data from 2023 to 2025 using SQL and Power BI. The goal was to uncover actionable insights into revenue trends, customer behavior, product performance, and regional sales, enabling better business decisions.
 
+This project covers the complete data analysis workflow—starting with data extraction and transformation using SQL, followed by visualization and storytelling with Power BI.
 
+🎯 Objective
+To design a robust sales analysis solution that:
 
-**🛠️ Tools and Technologies**
+Tracks company revenue and profit growth
 
-**SQL:** Utilized for data extraction, transformation, and loading (ETL) processes.
+Identifies key customer and product segments
 
-**Power BI:** Employed for data visualization and dashboard creation.
+Highlights regional sales distribution
 
-**Data Sources:** Sample datasets relevant to business scenarios.
+Provides interactive dashboards for decision-makers
 
+🧰 Tools Used
+Tool	Purpose
+SQL (MySQL)	Data extraction, filtering, joins, aggregations
+Power BI	Data modeling, DAX calculations, visualization
+Power Query	Importing and shaping data
+Excel/CSV	Data input and reference tables
 
+🗃️ Datasets Used
+Orders Table – Order ID, Customer ID, Product ID, Order Date, Sales, Quantity, Profit
 
-**🧩 Project Workflow**
+Products Table – Product ID, Name, Category, Subcategory, Unit Cost
 
-**Data Extraction:** Using SQL queries to retrieve data from relational databases.
+Customers Table – Customer ID, Segment, Country, Region
 
-**Data Transformation:** Cleaning and structuring data to ensure quality and consistency.
+Date Table – Generated in Power BI for time intelligence
 
-**Data Loading:** Importing the transformed data into Power BI.
+🧠 SQL Queries and Processing
+Joined Orders, Customers, and Products tables
 
-**Data Modeling:** Establishing relationships between different data tables within Power BI.
+Aggregated sales, profit, and quantity at multiple levels (region, product, time)
 
-**Visualization:** Creating interactive dashboards and reports to derive insights.
+Used GROUP BY, JOIN, and CASE statements for conditional analysis
 
+Created views to optimize Power BI import
 
+Example SQL Snippet:
+sql
+Copy
+Edit
+SELECT 
+    o.OrderDate,
+    c.Region,
+    p.Category,
+    SUM(o.Sales) AS TotalSales,
+    SUM(o.Profit) AS TotalProfit
+FROM Orders o
+JOIN Customers c ON o.CustomerID = c.CustomerID
+JOIN Products p ON o.ProductID = p.ProductID
+GROUP BY o.OrderDate, c.Region, p.Category;
+🧼 Power BI Data Modeling
+Loaded SQL views into Power BI
 
+Created relationships between dimension and fact tables
 
-**🎯 Learning Outcomes**
+Built calculated columns and DAX measures for KPIs
 
-Understanding the synergy between SQL and Power BI in data analysis.
+📊 KPIs Created Using DAX
+KPI	DAX Description
+Total Sales	SUM(Orders[Sales])
+Total Profit	SUM(Orders[Profit])
+Average Order Value	DIVIDE([Total Sales], DISTINCTCOUNT(Orders[Order ID]))
+Profit Margin	DIVIDE([Total Profit], [Total Sales])
+Monthly Growth	CALCULATE([Total Sales], DATESMTD('Date'[Date]))
 
-Gaining hands-on experience in building data models and visualizations.
+🎛️ Dashboard Features
+Time-based visualizations – Line chart for sales trend (monthly/quarterly)
 
-Enhancing skills in interpreting data to make informed business decisions.
+Category breakdown – Bar charts for top categories and subcategories
 
-This project serves as a valuable addition to a data analyst demonstrating proficiency in data handling and visualization tools and  data extraction to delivering actionable insights through dashboards.
+Customer segmentation – Pie chart for segments (Retail, Corporate, Home Office)
+
+Geographical sales – Map showing region/country-level performance
+
+Profitability overview – KPI cards for profit margin and AOV
+
+Filters/Slicers – Region, Segment, Category, Date
+
+🔍 Key Insights
+💰 Sales peaked in Q4 of each year—indicating strong holiday performance.
+
+🧑‍💼 Corporate segment generated the highest profit per customer.
+
+📉 Certain subcategories like Binders and Tables showed negative profit margins.
+
+🌎 Western and Eastern regions had the strongest consistent growth.
+
+🛍️ Technology and Office Supplies were top-selling categories.
+
+✅ Outcome
+This project delivered a comprehensive, dynamic dashboard using SQL + Power BI, enabling stakeholders to:
+
+Make informed product and regional investment decisions
+
+Track sales health and profitability across time
+
+Understand customer behavior and market segmentation
+
+Improve operational strategy with interactive insights
