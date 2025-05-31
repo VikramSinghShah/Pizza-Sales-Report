@@ -3,7 +3,7 @@
 **End-to-End Sales Analysis Dashboard Using SQL & Power BI & Excel.**
 
 
-An end-to-end business intelligence project analyzing sales and customer data from 2023 to 2025 using SQL and Power BI. The goal was to uncover actionable insights into revenue trends, customer behavior, product performance, and regional sales, enabling better business decisions.
+An end-to-end business intelligence project analyzing sales and customer data using SQL and Power BI. The goal was to uncover actionable insights into revenue trends, customer behavior, product performance, and regional sales, enabling better business decisions.
 
 This project covers the complete data analysis workflow—starting with data extraction and transformation using SQL, followed by visualization and storytelling with Power BI.
 
