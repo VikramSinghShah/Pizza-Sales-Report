@@ -2,90 +2,85 @@
 
 **End-to-End Sales Analysis Dashboard Using SQL & Power BI & Excel.**
 
+
 An end-to-end business intelligence project analyzing sales and customer data from 2023 to 2025 using SQL and Power BI. The goal was to uncover actionable insights into revenue trends, customer behavior, product performance, and regional sales, enabling better business decisions.
 
 This project covers the complete data analysis workflow—starting with data extraction and transformation using SQL, followed by visualization and storytelling with Power BI.
 
-🎯 Objective
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**🎯 Objective:**
+
 To design a robust sales analysis solution that:
 
-Tracks company revenue and profit growth
 
-Identifies key customer and product segments
+1. Tracks company revenue and profit growth.
 
-Highlights regional sales distribution
+2. Identifies key customer and product segments.
 
-Provides interactive dashboards for decision-makers
+3. Highlights regional sales distribution.
 
-🧰 Tools Used
-Tool	Purpose
-SQL (MySQL)	Data extraction, filtering, joins, aggregations
-Power BI	Data modeling, DAX calculations, visualization
-Power Query	Importing and shaping data
-Excel/CSV	Data input and reference tables
+4. Provides interactive dashboards for decision-makers.
 
-🗃️ Datasets Used
-Orders Table – Order ID, Customer ID, Product ID, Order Date, Sales, Quantity, Profit
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🧰 Tools Used:**
 
-Products Table – Product ID, Name, Category, Subcategory, Unit Cost
+**SQL:** Data extraction, filtering, joins, aggregations.
 
-Customers Table – Customer ID, Segment, Country, Region
+**Power BI:**	Data modeling, DAX calculations, visualization.
 
-Date Table – Generated in Power BI for time intelligence
+**Power Query:**	Importing and shaping data.
 
-🧠 SQL Queries and Processing
-Joined Orders, Customers, and Products tables
+**Excel/CSV:**	Data input and reference tables.
 
-Aggregated sales, profit, and quantity at multiple levels (region, product, time)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🧠 SQL Queries and Processing:**
 
-Used GROUP BY, JOIN, and CASE statements for conditional analysis
+1. Joined Orders, Customers, and Products tables
 
-Created views to optimize Power BI import
+2. Aggregated sales, profit, and quantity at multiple levels (region, product, time)
 
-Example SQL Snippet:
-sql
-Copy
-Edit
-SELECT 
-    o.OrderDate,
-    c.Region,
-    p.Category,
-    SUM(o.Sales) AS TotalSales,
-    SUM(o.Profit) AS TotalProfit
-FROM Orders o
-JOIN Customers c ON o.CustomerID = c.CustomerID
-JOIN Products p ON o.ProductID = p.ProductID
-GROUP BY o.OrderDate, c.Region, p.Category;
-🧼 Power BI Data Modeling
-Loaded SQL views into Power BI
+3. Used GROUP BY, JOIN, and CASE statements for conditional analysis
 
-Created relationships between dimension and fact tables
+4. Created views to optimize Power BI import
 
-Built calculated columns and DAX measures for KPIs
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🧼 Power BI Data Modeling:**
 
-📊 KPIs Created Using DAX
-KPI	DAX Description
-Total Sales	SUM(Orders[Sales])
-Total Profit	SUM(Orders[Profit])
-Average Order Value	DIVIDE([Total Sales], DISTINCTCOUNT(Orders[Order ID]))
-Profit Margin	DIVIDE([Total Profit], [Total Sales])
-Monthly Growth	CALCULATE([Total Sales], DATESMTD('Date'[Date]))
+1. Created relationships between dimension and fact tables.
 
-🎛️ Dashboard Features
-Time-based visualizations – Line chart for sales trend (monthly/quarterly)
+2. Built calculated columns and DAX measures for KPIs.
 
-Category breakdown – Bar charts for top categories and subcategories
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**📊 KPIs Created Using DAX:**
 
-Customer segmentation – Pie chart for segments (Retail, Corporate, Home Office)
+1. Total Revenue = SUM([total_price]).
 
-Geographical sales – Map showing region/country-level performance
+2. Average Order Value = [Total Revenue] / [Total Orders].
 
-Profitability overview – KPI cards for profit margin and AOV
+3. Total Pizzas Sold = SUM([quantity]).
 
-Filters/Slicers – Region, Segment, Category, Date
+4. Total Orders = DISTINCTCOUNT([order_id]).
 
-🔍 Key Insights
-💰 Sales peaked in Q4 of each year—indicating strong holiday performance.
+5. Average Pizzas Per Order = [Total Pizzas Sold] / [Total Orders].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🎛️ Dashboard Features:**
+
+1. Time-based visualizations – Line chart for Monthly trends for Total Orders.
+
+2.  Category breakdown – Stacked Bar and Column charts and Funnel for daily triend and Top and Bottom performance of Pizzas by Revenue, Quantity and Total Orders and Total pizza sold  by Category.
+
+3. Customer segmentation – Pie chart for Percentage of Sales by Pizza Size and Category.
+
+4. Profitability overview – KPI cards for Total Revenue, Average Order Value.
+
+5. Filters/Slicers – Pizza Category, Date
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🔍 Key Insights:**
+
+💰 Sales peaked is strong holiday performance.
 
 🧑‍💼 Corporate segment generated the highest profit per customer.
 
@@ -95,7 +90,9 @@ Filters/Slicers – Region, Segment, Category, Date
 
 🛍️ Technology and Office Supplies were top-selling categories.
 
-✅ Outcome
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**✅ Outcome:**
+
 This project delivered a comprehensive, dynamic dashboard using SQL + Power BI, enabling stakeholders to:
 
 Make informed product and regional investment decisions
