@@ -10,13 +10,13 @@ This project covers the complete data analysis workflow—starting with data ext
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 📊 Dashboard Snapshots:
 <p align="center">
-  <img src="./DASHBOARD SS/Marketing Dashboard Photo.png" width="700" alt="Summary Dashboard">
-  <br><i> Marketing Dashboard </i>
+  <img src="./Dashboard SS/Pizzza sales Home.png" width="700" alt="Summary Dashboard">
+  <br><i> 1. Pizza Sales Dashboard </i>
 </p>
 
 <p align="center">
-  <img src="./DASHBOARD SS/Marketing Dashboard Photo.png" width="700" alt="Summary Dashboard">
-  <br><i> Marketing Dashboard </i>
+  <img src="./Dashboard SS/Pizza sales Best Worst Seller.png" width="700" alt="Summary Dashboard">
+  <br><i> 2. Pizza Sales Dashboard </i>
 </p>
 
 ----------------------------------------------
