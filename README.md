@@ -8,7 +8,18 @@ An end-to-end business intelligence project analyzing sales and customer data us
 This project covers the complete data analysis workflow—starting with data extraction and transformation using SQL, followed by visualization and storytelling with Power BI.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 📊 Dashboard Snapshots:
+<p align="center">
+  <img src="./DASHBOARD SS/Marketing Dashboard Photo.png" width="700" alt="Summary Dashboard">
+  <br><i> Marketing Dashboard </i>
+</p>
 
+<p align="center">
+  <img src="./DASHBOARD SS/Marketing Dashboard Photo.png" width="700" alt="Summary Dashboard">
+  <br><i> Marketing Dashboard </i>
+</p>
+
+----------------------------------------------
 **🎯 Objective:**
 
 To design a robust sales analysis solution that:
